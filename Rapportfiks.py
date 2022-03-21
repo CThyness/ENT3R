@@ -1,6 +1,6 @@
 filname = "rapport.csv" #Filen som skal sorteres, husk å endre navnet slik at det stemmer
 f = open(filname)
-f.readline() #Bli kvitt første linje som bare inneholder
+f.readline() #Bli kvitt første linje som bare inneholder kategorinavn
 
 guests = []
 for line in f:
@@ -10,6 +10,6 @@ for line in f:
         values[0] = values[0][1:-1]
 
     if values[0].lower() not in guests and values[2] != "Moderator": #Sjekker at eleven ikke er i listen eller moderator
-        guests.append(values[0].lower())
+        guests.append(values[0])
 
 print(guests)
